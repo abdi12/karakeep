@@ -6,9 +6,9 @@ services:
       # By default, the data is stored in a docker volume called "data".
       # If you want to mount a custom directory, change the volume mapping to:
       # - /path/to/your/directory:/data
-      - data:/data
+      - ./data:/data:Z
     ports:
-      - 8080:8080
+      - "127.0.0.1:8080:8080"
     env_file:
       - .env
     environment:
@@ -37,7 +37,7 @@ services:
     environment:
       MEILI_NO_ANALYTICS: "true"
     volumes:
-      - meilisearch:/meili_data
+      - ./meilisearch:/meili_data:Z
 
 volumes:
   meilisearch:
