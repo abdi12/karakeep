@@ -72,6 +72,7 @@ To run `karakeep` application using podman follow this instructions:
    NEXTAUTH_SECRET=super_random_string
    MEILI_MASTER_KEY=another_random_string
    NEXTAUTH_URL=http://localhost:8080
+   PORT=8080
    ```
 4. Update `docker-compose.yml` and change default port to `8080:8080`
 5. Spin up your multi-container environment, navigate to your compose configuration directory and run:
